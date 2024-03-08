@@ -1,0 +1,55 @@
+const author2 = {   results: [
+    {
+        id: "MLA412445",
+        title: "Libros Físicos",
+        condition: 191
+    },
+    {
+        id: "MLA436380",
+        natitleme: "Muebles para el Hogar",
+        condition: 142
+    }
+],
+paging: {
+total: 404,
+primary_results: 404,
+offset: 0,
+limit: 4
+},
+available_filters: [
+{
+    id: "category",
+    name: "Categorías",
+    type: "text",
+    values: [
+        {
+            id: "MLA412445",
+            name: "Libros Físicos",
+            results: 191
+        },
+        {
+            id: "MLA436380",
+            name: "Muebles para el Hogar",
+            results: 142
+        }
+    ]
+},
+{
+    id: "state",
+    name: "Ubicación",
+    type: "text",
+    values: [
+        {
+            id: "TUxBUENBUGw3M2E1",
+            name: "Capital Federal",
+            results: 261
+        },
+        {
+            id: "TUxBUEdSQXJlMDNm",
+            name: "Bs.As. G.B.A. Sur",
+            results: 15
+        }
+    ]
+}
+]
+};

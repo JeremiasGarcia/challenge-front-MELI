@@ -1,0 +1,43 @@
+@use 'variables';
+.header-nav{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: variables.$primary-color;
+    height: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.form-nav{
+    display: flex;
+    width: 50%;
+}
+
+.input-nav{
+    height: 2rem;
+    flex: 1;
+    border: 0;
+    padding-left: 0.5rem;
+}
+
+.btnIni-nav{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.btnSerach-nav{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    border: 0;
+    cursor: pointer;
+}
