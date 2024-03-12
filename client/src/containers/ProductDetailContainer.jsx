@@ -12,7 +12,7 @@ const ProductDetailContainer = () => {
   }, [getProductById, id]);
 
   return (
-    <div>
+    <div className="pdc-main">
       {loading && <p>Cargando productos...</p>}
       {error && <p>Error al cargar productos: {error}</p>}
       <ProductDetail product={product} />

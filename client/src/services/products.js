@@ -1,31 +1,33 @@
-export const getAllProducts = async () => {
+export const fetchAllProducts = async () => {
   try {
     const response = await fetch("/api/items");
     const { items } = await response.json();
 
-    return items.map(({ id, thumbnail, title, price }) => ({
+    return items.map(({ id, thumbnail, title, price, currency_id }) => ({
       id,
       img: thumbnail,
       title,
       price,
+      currency: currency_id
     }));
   } catch (error) {
     throw new Error("Error al obtener todos los productos");
   }
 };
 
-export const searchProducts = async (search) => {
+export const fetchSearchProducts = async (search) => {
   if (search === "") return null;
 
   try {
     const response = await fetch(`/api/items?q=${search}`);
     const { items } = await response.json();
 
-    return items.map(({ id, thumbnail, title, price }) => ({
+    return items.map(({ id, thumbnail, title, price, currency_id }) => ({
       id,
       img: thumbnail,
       title,
       price,
+      currency: currency_id
     }));
   } catch (e) {
     throw new Error("Error al buscar productos");
@@ -33,7 +35,7 @@ export const searchProducts = async (search) => {
 
 };
 
-export const getProduct = async (id) => {
+export const fetchProductById = async (id) => {
   if (id === "") return null;
   try {
     const response = await fetch(`/api/items/${id}`);
@@ -43,7 +45,8 @@ export const getProduct = async (id) => {
       img: item.thumbnail,
       title: item.title,
       price: item.price,
-      description: item.plain_text
+      description: item.plain_text,
+      currency: item.currency_id
     };
 
   } catch (e) {

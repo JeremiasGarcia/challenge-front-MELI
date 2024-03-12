@@ -1,8 +1,8 @@
 import { useState, useRef, useCallback } from "react";
 import {
-  getAllProducts,
-  searchProducts,
-  getProduct,
+  fetchAllProducts,
+  fetchSearchProducts,
+  fetchProductById,
 } from "../services/products";
 
 export const useProducts = () => {
@@ -12,11 +12,11 @@ export const useProducts = () => {
   const [error, setError] = useState(null);
   const previousSearch = useRef();
 
-  const getAll = useCallback(async () => {
+  const getAllProducts = useCallback(async () => {
     try {
       setLoading(true);
       setError(null);
-      const newProducts = await getAllProducts();
+      const newProducts = await fetchAllProducts();
       setProducts(newProducts);
     } catch (e) {
       setError(e.message);
@@ -25,13 +25,13 @@ export const useProducts = () => {
     }
   }, []);
 
-  const getProducts = useCallback(async (search) => {
+  const getSearchProducts = useCallback(async (search) => {
     if (!search || search === "" || search !== previousSearch.current) {
       try {
         setLoading(true);
         setError(null);
         previousSearch.current = search;
-        const newProducts = await searchProducts(search);
+        const newProducts = await fetchSearchProducts(search);
         setProducts(newProducts);
       } catch (e) {
         setError(e.message);
@@ -46,7 +46,7 @@ export const useProducts = () => {
     try {
       setLoading(true);
       setError(null);
-      const newProduct = await getProduct(id);
+      const newProduct = await fetchProductById(id);
       setProduct(newProduct);
     } catch (e) {
       setError(e.message);
@@ -55,5 +55,13 @@ export const useProducts = () => {
     }
   }, []);
 
-  return { products, product, loading, error, getAll, getProducts, getProductById };
+  return {
+    getAllProducts,
+    getSearchProducts,
+    getProductById,
+    products,
+    product,
+    loading,
+    error,
+  };
 };

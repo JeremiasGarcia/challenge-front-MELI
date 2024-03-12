@@ -93,4 +93,10 @@
   opacity: 0.5;
 }
 
+.pdc-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 /*# sourceMappingURL=style.css.map */

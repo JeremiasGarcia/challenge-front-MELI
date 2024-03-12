@@ -1,9 +1,27 @@
-.pd-section {
-    display: grid;
-    gap: 0.5rem;
+// .pd-section {
+//     display: grid;
+//     gap: 0.5rem;
+// }
+.pd-img {
+    flex: 1;
+    max-width: 680px;
+    height: auto;
 }
 
 .pd-price {
+    flex: 1;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.pd-title {
+    flex: 1;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.pd-description {
+    flex: 0.5;
     font-size: 1.25rem;
     font-weight: bold;
 }

@@ -1,9 +1,13 @@
-const author = { name: "Jeremias", lastname: "Garcia" };
+import 'dotenv/config';
+// const author = { name: "Jeremias", lastname: "Garcia" };
+const author = JSON.parse(process.env.AUTHOR_SIGNATURE);
+const queryLimit = process.env.QUERY_LIMIT;
 
 export const getProducts = async (query) => {
   try {
     const res = await fetch(
-      `https://api.mercadolibre.com/sites/MLA/search?q=${query}&limit=4`
+      // `https://api.mercadolibre.com/sites/MLA/search?q=${query}&limit=4`
+      `https://api.mercadolibre.com/sites/MLA/search?q=${query}&limit=${queryLimit}`
     );
     const products = await res.json();
     

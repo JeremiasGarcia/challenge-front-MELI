@@ -6,7 +6,7 @@ import ProductDetailContainer from "./containers/ProductDetailContainer";
 import { useProducts } from "./hooks/useProducts";
 
 export const App = () => {
-  const { products, loading, error, getAll } = useProducts();
+  const { getAllProducts, products, loading, error } = useProducts();
 
   return (
     <Router>
@@ -20,7 +20,7 @@ export const App = () => {
                 products={products}
                 loading={loading}
                 error={error}
-                getAll={getAll}
+                getAllProducts={getAllProducts}
               />
             }
           />
