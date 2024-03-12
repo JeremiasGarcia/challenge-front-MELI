@@ -41,62 +41,152 @@
   cursor: pointer;
 }
 
-.pl-article {
-  display: grid;
-  gap: 1rem;
-}
-
-.pl-product-container {
+.pl-container {
   display: flex;
+  flex-direction: grid;
   gap: 1rem;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .pl-product {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  flex: 1;
-  align-items: center;
-  margin-left: 1rem;
-  margin-top: 1rem;
+  flex-direction: grid;
+  width: 70%;
+  height: 100%;
 }
 
-.pl-product img {
-  width: 100px;
+.pl-img {
+  height: 100%;
+  padding: 16px;
+}
+
+.pl-img img {
+  width: 180px;
+  height: 180px;
 }
 
 .pl-details {
-  flex: 1;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
 }
 
 .pl-price {
-  font-size: 1.25rem;
-  font-weight: bold;
+  height: 100%;
+  font-size: 24px;
+  font-weight: normal;
+  margin-bottom: 0;
+  padding-bottom: 32px;
 }
 
-.pl-address-container {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  gap: 0.5rem;
-  align-items: center;
-  justify-content: center;
-  margin-left: 1rem;
-  margin-top: 1rem;
+.pl-title {
+  height: 100%;
+  font-size: 18px;
+  font-weight: normal;
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .pl-address {
-  font-size: 0.875rem;
+  text-align: center;
+  width: 30%;
+  height: 100%;
+}
+
+.pl-address span {
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
   opacity: 0.5;
+}
+
+.plc-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.pd-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.pd-img {
+  width: 60%;
+  height: auto;
+}
+
+.pd-img img {
+  width: 380px;
+  height: auto;
+}
+
+.pd-detail {
+  width: 40%;
+  height: auto;
+}
+
+.pd-condition {
+  font-size: 16px;
+  margin-bottom: 0;
+  padding-top: 32px;
+}
+
+.pd-title {
+  font-size: 24px;
+  margin-top: 16px;
+  margin-bottom: 0;
+  padding-bottom: 32px;
+}
+
+.pd-price {
+  font-size: 46px;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 32px;
+}
+
+.pd-buy {
+  background-color: #3486FA;
+  color: whitesmoke;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 60px;
+  cursor: pointer;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 32px;
+}
+
+.pd-description {
+  width: 60%;
+  margin-left: 32px;
+  margin-bottom: 32px;
+}
+
+.pd-description h3 {
+  font-size: 28px;
+  margin-bottom: 0;
+  padding-bottom: 32px;
+}
+
+.pd-description p {
+  font-size: 16px;
+  margin-top: 0;
+  padding-bottom: 32px;
 }
 
 .pdc-main {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
 }
 
 /*# sourceMappingURL=style.css.map */

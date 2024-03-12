@@ -1,27 +1,74 @@
-// .pd-section {
-//     display: grid;
-//     gap: 0.5rem;
-// }
+@use 'variables';
+
+.pd-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
 .pd-img {
-    flex: 1;
-    max-width: 680px;
+    width: 60%;
     height: auto;
 }
 
-.pd-price {
-    flex: 1;
-    font-size: 1.25rem;
-    font-weight: bold;
+.pd-img img{
+    width: 380px;
+    height: auto;
+}
+
+.pd-detail {
+    width: 40%;
+    height: auto;
+}
+
+.pd-condition {
+    font-size: 16px;
+    margin-bottom: 0;
+    padding-top: 32px;
 }
 
 .pd-title {
-    flex: 1;
-    font-size: 1.25rem;
-    font-weight: bold;
+    font-size: 24px;
+    margin-top: 16px;
+    margin-bottom: 0;
+    padding-bottom: 32px;
+}
+
+.pd-price {
+    font-size: 46px;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 32px;
+}
+
+.pd-buy {
+    background-color: variables.$btn-buy;
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 60px;
+    cursor: pointer;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-right: 32px;
 }
 
 .pd-description {
-    flex: 0.5;
-    font-size: 1.25rem;
-    font-weight: bold;
+    width: 60%;
+    margin-left: 32px;
+    margin-bottom: 32px;
+}
+
+.pd-description h3{
+    font-size: 28px;
+    margin-bottom: 0;
+    padding-bottom: 32px;
+}
+
+.pd-description p{
+    font-size: 16px;
+    margin-top: 0;
+    padding-bottom: 32px;
 }

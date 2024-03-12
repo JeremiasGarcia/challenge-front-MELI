@@ -46,7 +46,8 @@ export const fetchProductById = async (id) => {
       title: item.title,
       price: item.price,
       description: item.plain_text,
-      currency: item.currency_id
+      currency: item.currency_id,
+      condition: item.condition
     };
 
   } catch (e) {

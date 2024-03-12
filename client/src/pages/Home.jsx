@@ -1,13 +1,13 @@
-import { useEffect } from 'react';
-import { ProductList } from '../components/ProductList';
+import { useEffect } from "react";
+import { ProductList } from "../components/ProductList";
+import { useProducts } from "../hooks/useProducts";
 
-export const Home = ({ getAllProducts, products, loading, error }) => {
-  
+export const Home = () => {
+  const { getAllProducts, products, loading, error } = useProducts();
+
   useEffect(() => {
     getAllProducts();
-  }, []);
-
-  console.log('home:'+products);
+  }, [getAllProducts]);
 
   return (
     <div>

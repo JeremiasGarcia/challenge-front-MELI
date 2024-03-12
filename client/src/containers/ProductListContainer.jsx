@@ -15,7 +15,7 @@ const ProductListContainer = () => {
   
   
   return (
-    <div className="plc-main">
+    <div className="plc-container">
       {loading && <p>Cargando productos...</p>}
       {error && <p>Error al cargar productos: {error}</p>}
       {products.map((product) => (
