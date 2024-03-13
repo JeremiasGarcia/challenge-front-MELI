@@ -1,4 +1,8 @@
+@use 'variables';
+
 .pdc-main{
     display: flex;
     flex-direction: row;
+    width: max-content;
+    background-color: variables.$secondary-color;
 }

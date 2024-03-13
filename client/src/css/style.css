@@ -48,6 +48,7 @@
   align-items: center;
   margin-top: 16px;
   margin-bottom: 16px;
+  background-color: white;
 }
 
 .pl-product {
@@ -109,6 +110,7 @@ a {
 .plc-main {
   display: flex;
   flex-direction: column;
+  background-color: #EEEEEE;
 }
 
 .pd-container {
@@ -187,6 +189,8 @@ a {
 .pdc-main {
   display: flex;
   flex-direction: row;
+  width: max-content;
+  background-color: #EEEEEE;
 }
 
 /*# sourceMappingURL=style.css.map */

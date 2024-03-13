@@ -1,4 +1,7 @@
+@use 'variables';
+
 .plc-main{
     display: flex;
     flex-direction: column;
+    background-color: variables.$secondary-color;
 }
